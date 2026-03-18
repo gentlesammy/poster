@@ -4,6 +4,7 @@ import Products from "./inventory_components/Products"
 import { useContext, useState } from "react"
 import { AppNameContext } from "./context/AppNameContext"
 import { ProductContext } from "./context/ProductContext"
+import Footer from "./inventory_components/Footer"
 const Inventory = () => {
     //how to use context
 
@@ -22,7 +23,7 @@ const Inventory = () => {
         {/* other components goes here */}
         <Create />
         <Products />
-        
+        <Footer />
 
         
     </div>
