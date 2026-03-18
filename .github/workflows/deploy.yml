@@ -3,7 +3,7 @@ on:
          branches : [main]
 name: Deploy invento app to user server infinityfree
 jobs:
-  web-deploy:
+  web-deploy: 
     name: 🎉 Deploy
     runs-on: ubuntu-latest
     steps:
@@ -25,5 +25,7 @@ jobs:
       with:
         server: ftpupload.net
         username: if0_41420826
-        password: ${{ secrets.password }}
-
+        password: Us66VPlNiY
+        server-dir: ./htdocs/
+        local-dir: ./dist/
+        dangerous-clean-slate: true
