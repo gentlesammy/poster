@@ -15,11 +15,11 @@ createRoot(document.getElementById('root')).render(
   <AppNameProvider>
     <ProductProvider>
       {/* <Meal /> */}
-      {/* <Inventory /> */}
+      <Inventory />
     </ProductProvider>
     {/* <Bank /> */}
     {/* <App /> */}
-    <Blogger />
+    {/* <Blogger /> */}
     
   </AppNameProvider>
   </StrictMode>,
