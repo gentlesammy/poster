@@ -4,7 +4,7 @@ const Footer = () => {
   return (
     <div className="row">
         <div className="col-md-12 text-center">
-            <p> &copy; Copyright Invento  </p>
+            <p> &copy; Copyright Dandy Baba  </p>
         </div>
     </div>
   )
