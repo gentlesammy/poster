@@ -26,4 +26,4 @@ jobs:
             AWS_ACCESS_KEY_ID: ${{ secrets.INVENTO_KEY }}
             AWS_SECRET_ACCESS_KEY: ${{ secrets.INVENTO_SECRET }}
             AWS_REGION: 'us-east-1'  
-            SOURCE_DIR: 'public'      
+            SOURCE_DIR: 'dist'      
