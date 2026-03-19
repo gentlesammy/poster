@@ -1,0 +1,30 @@
+name: deploy to s3
+
+on:
+  push:
+    branches:
+    - aws
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Use Node.js 22
+        uses: actions/setup-node@v6
+        with:
+         node-version: '22'
+
+      - name:  Build Project
+        run: |
+            npm install
+            npm run build
+      - uses: actions/checkout@master
+      - uses: jakejarvis/s3-sync-action@master
+        with:
+          args: --acl public-read --follow-symlinks --delete
+        env:
+            AWS_S3_BUCKET: ${{ secrets.INVENTO_BUCKET }}
+            AWS_ACCESS_KEY_ID: ${{ secrets.INVENTO_KEY }}
+            AWS_SECRET_ACCESS_KEY: ${{ secrets.INVENTO_SECRET }}
+            AWS_REGION: 'us-east-1'  
+            SOURCE_DIR: 'public'      
